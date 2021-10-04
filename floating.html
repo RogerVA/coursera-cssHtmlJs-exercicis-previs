@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Floating Elements</title>
+<style>
+
+div {
+  background-color: #00FFFF;
+}
+p {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  float:  left;
+  margin-right: 10px;
+}
+
+#p1 {
+  background-color: #A52A2A;
+  float: right;
+}
+#p2 {
+  background-color: #DEB887;
+}
+#p3 {
+  background-color: #5F9EA0;
+  clear: left;
+}
+#p4 {
+  background-color: #FF7F50;
+}
+
+section {
+  clear:  left;
+}
+
+</style>
+<!--
+p
+  float: left: los pone a todos a la izquierda, en fila y en orden, pero fuera de la caja div
+px
+  float: right: mueves el elemento a la derecha, i el que tubiera debajo sube.
+    quando flotas elementos el navegador los saca del flujo de documentos normal.
+    con los elementos flotantes, los margenes nunca colapsan 
+
+section
+  clear: left: le dices al navegador que nada puede flotar a la izquierda de este elemento, así que lo envia a la siguiente linea libre, y a partir de allí sigue como lo hacia antes. para que no se superponga nada, lo suyo es hacer 
+  clear: both; (izq, der)
+-->
+</head>
+<body>
+<h1>Floating Elements</h1>
+
+<div>
+  <p id="p1"></p>
+  <p id="p2"></p>
+  <p id="p3"></p>
+  <p id="p4"></p>
+  <section>This is regular content continuing after the the paragraph boxes.</section>
+</div>
+
+
+</body>
+</html>

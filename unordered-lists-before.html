@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Unordered Lists</title>
+</head>
+<body>
+	<h1>Unordered list</h1>
+	<div>
+		My typical idnner shopping list:
+		<ul><!-- unordered list-->
+			<li>Milk</li><!-- Dins de les llistes, cada element ha d'anar amb aquesta marca li, dins de les ul, només s'admeten elements li-->
+			<li>Donuts
+					<ol>
+						<li>Sugar</li>
+						<li>Chocolate</li>
+					</ol>
+			</li>
+			<li>Cookies
+				<ul>
+				<li>Chocolate</li>	
+				<li>Sugar</li>
+				<li>Peanut Butter</li>
+				</ul>
+			</li>
+			<li>Pepto Bismol</li>
+		</ul>
+	</div>
+	<div>
+		Oreo cookie eating procedure:
+		<ol><!-- Ordered list, lo mismo quen ul, solo se admiten elementos li-->
+			<li>Open box</li>
+			<li>Take out cookie</li>
+			<li>Make a double oreo
+				<ol>
+					<li>Peel off the top part</li>
+					<li>Place another cookie in the middle</li>
+					<li>Put back the top part</li>
+				</ol>
+			</li>
+			<li>Enjoy!</li>
+		</ol>
+	</div>
+	<div><!-- per escriure <, > o & escribim respectivament "&lt;", "&gt;" i "&amp;" ja que son paraules reservades-->
+		&lt;, &gt;, &amp;
+	</div>
+	<div>
+		<!-- També hi han altres adreçes útils com la c encerclada del copiritght, etc-->
+		&copy; &amp;copy; copyright. 
+	</div>
+	<div>
+		&amp;nbsp; sirve para que estas dos palabras siempre vayan juntas en la misma linea, de tal manera que o vayan las dos a la siguiente o se queden ambas en la anterior, de facto también añade espacios pero es un mal uso, hay otros metodos, uso hello&nbsp;world.
+		Un metdo correcto para añadir espacios adicionales, seria envolver las palabras que tocaran con un &lt;span&gt; con algun margen, en este caso izquierdo.
+	</div>
+	<div>
+		&quot; son las comillas ", para usar quando por temas de recodificación (i.e. no usar utf-8), no se muestran bien.
+	</div>
+</body>
+</html>

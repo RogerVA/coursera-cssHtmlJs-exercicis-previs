@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Style Placement</title>
+<link rel="stylesheet" href="style.css">
+<!-- Asi se llaman a las paginas externas de estilo, con <link, rel="stylsheet" decimos al navegador que es una hoja de estilo, y href es la dirección, en este caso esta en la misma carpeta que esta pagina, asi que no necesitamos darle direccion -->
+
+<!--Prioridad de css:
+  Origen:
+    La última declaracion gana (de arriba a abajo) (si la especificidad no lo impide)
+  Merge (Fusion):
+    Si varias declaraciones afectan a lo mismo pero no se contradicen, se aplican todas
+  Herencia:
+    Se puede especificar un estilo para body, y entonces toda la web se vera con esas caracteristicas, pero después puedes especificar cosas ke se reescribiran como en la herencia habitual.
+  Especifidad: 
+    La declaracion mas especifica gana. Si especificas el estilo en un elemento gana a todo, lo siguiente es si especificas el id, lo siguiente es especificar la classe (consultar en css-syntax.html), pseudoclase o atributo, y por ultimo el numero de elementos que se utilizan en la combinacion seleccionada. Lo que tenga la "puntuacion" mas alta gana. 
+      Ejm        <h2 style->  div p{-}  div #myParag{-} div.big p{-}
+        Style:      1             0         0               0
+        ID:         0             0         1               0
+        Class       0             0         0               1
+        # elem      0             2         1               2
+    La manera de saltarse todas las especificidades es añadir un "!important" al final, i.e. "p {color: green !important}" gana a cualquiera. (Recomendable no usarlo)
+ -->
+<style>
+
+h2 {
+  color: maroon;
+}
+
+</style>
+</head>
+<body>
+<h1>Style Placement</h1>
+<h2>Subheading 1</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex et similique cupiditate dignissimos delectus nulla dolore, eos dolorum quidem excepturi, facere non repellat accusamus, atque? Id voluptate eos et accusantium.</p>
+<h2>Subheading 2</h2>
+<p style="text-align: center; color: green;">I am centered!</p>
+<!--El css se puede añadir o en style al principio, o en el propio elemento añadiendo el atributo style, o en una hoja de estilo externa-->
+
+</body>
+</html>

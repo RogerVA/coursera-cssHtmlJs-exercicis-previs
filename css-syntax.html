@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Anatomy of a CSS Rule</title>
+<style>
+p {
+  color: blue;
+  font-size: 20px;
+  width: 200px;
+}
+
+h1 {
+  color: green;
+  font-size: 36px;
+  text-align: center;
+}
+
+.red {
+  color: red;
+}
+
+.italian{
+  font-style: italic;
+}
+</style>
+<!--En style se puede hacer un css local. font-size = tamaño fuente. text-align = alineacion de texto. font-weight: bold = negrita, font-style: italic =cursiva, background-color = fondo del texto, opacity = transparencia (.6 es 60%).
+
+Se puede marcar lo afectado por el css asi:
+Selector de elemento: por el tipo de elemento (p, h1, div, etc); 
+Selector de clase: .nombreDeLaClase (ejm ".blue { color: blue;}" y en el html
+      <p class="blue">...</p>
+      Nota, se pueden aplicar mas de una clase:
+      <div class="blue, hight">...</div>
+Selector de identificacion: #nombreDelId (ejm "#name{ color: blue; }" y en html
+      <div id="name">...</div>)
+      Nota: un mismo id solo se puede usar una vez en cada html
+
+Tambien se pueden combinar afectando a multiples clases: 
+"div, .blue { color: blue;}" afectara a todos los <div> i a todos los class="blue"
+
+Y combinar afectando a lo que sea de ambas clases simultaneamente (se aplica herenca, i.e. si tienes elemento general i uno particular, se aplica el particular):
+"p.big {font-size: 20px;}" afectara solo a los <p class="big"> pero no a <p> o a 
+<div class="big">
+tambien funciona ".big.italic {font-size: 20px; font-style: italic;}"
+
+Combinar anidadamente: "article > .colored { color: blue;}" o 
+"article p {color: blue;}" afectara a <article>...<p>...</p>...</article>
+tambien funciona "article > .colored {color: blue;}"
+
+
+Y combinar anidadamente de manera directa: 
+"article > p {color: blue;}" afectara a <article> <p>...</p> </article> pero no a 
+<article>...<div>...<p>...</p>...</div>...</article>
+tambien funciona ".colored p { color: blue; }"
+-->
+</head>
+<body>
+<h1>Anatomy of a CSS Rule</h1>
+<h2>Subheading 1</h2>
+<p>CSS works by associating rules with HTML elements. These rules govern how the content of specified elements should be displayed. A CSS rule contains two parts: a selector and a declaration.</p>
+<h2>Subheading 2</h2>
+<p class="red italian">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est maxime aperiam blanditiis reprehenderit voluptatem quia quas nesciunt amet atque temporibus quod harum sequi voluptate consequatur tenetur perferendis, cum ad! Eos.</p>
+</body>
+</html>

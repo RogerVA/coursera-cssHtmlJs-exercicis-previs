@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>div and span elements</title><!--division y abarcar (div elemento generico de bloque, span elemento generico de linea) 
+		div flujo, span phrasing-->
+</head>
+<body>
+	<div>*** DIV 1: Algun contenido aqui***</div>
+	<div>*** DIV 2: Siguiendo justo despues de div 1***</div>
+	<span>*** SPAN 1: Siguiendo justo despues de div 2***</span><!-- se va a la linea siguiente pk div requiere su propia linea, lo mismo pasa con el siguiente div 3. si pusieramos varios span seguidos se concatenarian en la misma linea. Tambien podria escribir todo el codigo en la misma linea sin saltos ni tabulaciones que la representacion de la web seria la misma-->
+	<div>
+		*** DIV 3: Siguiendo justo despues de span 1
+		<span>*** SPAN 2: Dentro de div 3***</span>
+		Continuando el contenido de div 3***
+	</div><!-- se puede anidar span en div, pero no div en span-->
+</body>
+</html>

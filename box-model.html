@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Box Model</title>
+<style>
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+}
+
+#box {
+  background-color: blue;
+  padding: 10px 10px 10px 10px;
+  border: 5px solid black;
+  margin: 40px;
+  width: 300px;
+  height: 50px;
+  overflow:  auto;
+  box-sizing: border-box;
+
+}
+#content {
+  background-color: #90EE90; /*green*/
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+</style>
+<!-- body
+margen 0
+relleno 0
+color de fondo gris
+tamaño de caja: borde de la caja; (explicado al final box, el siguiente)
+
+box
+color de fondo azul
+relleno 10 superior, 10 derecha, 10 inferior, 10 izquierda (= 10px al ser iguales)
+frontera 5 pixels solidos negros
+margen 40 (pasa lo mismo que con relleno, se puede especificar cada lado)
+  Nota: Los margenes de izquierda y derecha son acumulativos 20+30=50
+    pero los margenes de arriba abajo colapsan 20+30 = max(20, 30) = 30
+  Nota: ademas muchos elementos tienen margenes predeterminados por el navegador
+    que se aplican a no ser que especifiques lo contrario
+ancho (de la caja) 300px (sino rellenaria toda la linea o lineas)
+  Nota, a no ser que se diga lo contrario, el ancho de la caja define el ancho de
+    la caja del contenido, la caja total mide 300+10+10+5+5=330px
+alto (de la caja) 50px. Si el conenido es superior a lo que cabe en la caja, el
+  contenido sobresaldra fuera de la caja (incluso llegando a sobreponerse con el siguiente contenido)
+desbordamiento: Auto. Es que se hace cuando pasa lo anterior. El predeterminado es
+  "visible". Auto lo circunscribe y pone barras de desplazamiento cuando se necesitan. Con "scroll" deja las barras de desplazamiento siempre visibles se necesiten o no. 
+tamaño de caja: borde de la caja; asi el ancho se refiere al borde y no al contenido
+  Nota: el predeterminado es content-box (contenido)
+  Nota: ESTA PROPIEDAD NO ES HEREDITARIA
+
+*{...} es la manera de decir: aplica esto a cada elemento que tenga esta propiedad
+p.ejm. para propiedades que no se heredan. 
+ --> 
+
+</head>
+<body>
+
+<h1>Box Model</h1>
+
+<div id="box">
+  <div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+</div>
+
+
+</body>
+</html>
+
